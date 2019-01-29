@@ -12,13 +12,27 @@
 ## Notas importantes
 
 ## Sobre la base de datos
+```
+# Crear la base de datos, se debe tener las credenciales en config/database.yml
+bundle exec rake db:create
+
+# Realizar cambios en la base de datos, se ejecutan una sola vez en orden de creacion los archivos en db/migrations
+bundle exec rake db:migrate
+
+# Este comando borra la base de datos
+bundle exec rake db:drop
+```
 
 ## Comandos mas usados
 
 ```bash
+  # Crear nuevo proyecto
+  rails new jpir --database=postgresql
+  
   # Este comando crea una migracion y un modelo asociado a esta
   # La migracion indica un cambio en la base de datos.
   rails g model <nombre_del_modelo> <campo1>:<tipo_de_dato> <campo2>:<tipo_de_dato>
+ 
 ```
 
 ## Sobre el servidor de produccion
