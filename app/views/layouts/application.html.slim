@@ -1,13 +1,14 @@
 doctype html
 html
   head
-    title
+    title 
       | JPIR
     = csrf_meta_tags
     = csp_meta_tag
 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    javascript_include_tag "http://maps.googleapis.com/maps/api/js?key=#{ENV["GMAPS_A"]}&sensor=true"
   body.page-session.page-header-fixed.page-sidebar-fixed
     section#wrapper
       = render "shared/nav/header"
@@ -19,3 +20,4 @@ html
       = render "shared/nav/footer"
     #back-top.animated.pulse.circle
       i.fa.fa-angle-up
+    script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=#{ENV['GMAPS_API_KEY']}&callback=initMap" 

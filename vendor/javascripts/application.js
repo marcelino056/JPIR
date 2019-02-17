@@ -13,4 +13,6 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= gmaps
+//= gmaps_ujs
 //= require_tree .

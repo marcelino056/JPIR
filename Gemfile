@@ -19,6 +19,8 @@ gem 'cancancan' # Manejo de permisos
 gem 'slim-rails' # Hacer HTML mas legible
 gem 'dotenv' # Gema para manejar claves y variables de la maquina
 gem 'aasm' # Gema para manejar estados
+gem 'gmaps-rails'
+
 
 # Gemas solo para usar en la maquina local
 group :development, :test do
